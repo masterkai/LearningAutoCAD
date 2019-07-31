@@ -1,0 +1,235 @@
+.apply {
+  background: rgb(50,133,246);
+  background: linear-gradient(0deg, rgba(50, 133, 246, .65) 0%, rgba(0, 212, 255, .65) 100%);
+  position: relative;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  &::after {
+    top: 0;
+    left: 0;
+    z-index: -1;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-position: center;
+    background-size: contain;
+    background-repeat: repeat;
+    filter: brightness($brightness);
+  }
+
+  @include breakpoint($large) {
+    padding-bottom: 30px;
+  }
+
+  .flexContainer {
+    margin: 30px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include breakpoint(max-width 1400px) {
+      margin: 25px 0;
+    }
+    @include breakpoint($large) {
+      flex-direction: column;
+      margin: 0;
+    }
+
+    .applicationRule {
+
+      p {
+        letter-spacing: $ls-content;
+        color: #ffffff;
+        margin: 10px auto;
+        line-height: 1.375;
+        text-shadow: 1px 1px 3px black;
+      }
+
+      position: relative;
+      padding: 20px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: start;
+      flex: 0 1 45%;
+      @include breakpoint($large) {
+        order: 2;
+        border-radius: 15px;
+      }
+      @include breakpoint($ipad) {
+        align-items: center;
+        padding: 20px;
+      }
+
+      img {
+        margin-right: auto;
+        margin-left: auto;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        border-radius: 15px;
+
+        @include breakpoint($ipad) {
+          width: 100%;
+          margin-bottom: 30px;
+        }
+      }
+
+      ul {
+        padding-left: 20px;
+        list-style: decimal;
+        line-height: 1.5;
+
+        li {
+          margin-bottom: 15px;
+        }
+      }
+
+      @include breakpoint($large) {
+        order: 1;
+      }
+      @include breakpoint($ipad) {
+        order: 1;
+      }
+    }
+
+    .form {
+      .form-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+
+        h2 {
+          flex: 1 1 auto;
+          color: $color-brown;
+          padding: 0 20px;
+          width: 100%;
+          text-align: center;
+          font-size: 1.5rem;
+          line-height: 1.375;
+          @include breakpoint($medium) {
+            flex: 1 1 75%;
+          }
+          @include breakpoint($iphone) {
+            font-size: 1.2rem;
+            line-height: 1.375;
+            margin: 0 auto;
+          }
+
+        }
+
+        bar {
+          flex: 1 1 30%;
+          border: 1px solid $color-brown;
+          height: 1px;
+          width: 100%;
+          @include breakpoint($medium) {
+            flex: 1 1 25%;
+          }
+          @include breakpoint($medium) {
+            flex: 1 1 15%;
+          }
+          @include breakpoint($iphone) {
+            flex: 1 1 2%;
+          }
+
+        }
+      }
+
+      .gift {
+        @include breakpoint($iphone) {
+          font-size: 1.15rem;
+        }
+        color: #fff;
+        text-align: center;
+        font-size: 1.375rem;
+        margin-bottom: 15px;
+      }
+
+      @include breakpoint($large) {
+        padding: 20px;
+        order: 0;
+        margin-bottom: 0px;
+      }
+      width: 100%;
+      border-radius: 10px;
+      padding: 25px;
+      flex: 0 1 45%;
+      display: flex;
+      flex-direction: column;
+
+      .fieldSets-group {
+        @include breakpoint($ipad) {
+          flex-direction: column;
+        }
+        display: flex;
+        justify-content: space-between;
+
+        .fieldSet {
+          &--read {
+            label {
+              letter-spacing: $ls-content;
+              display: flex;
+              align-items: center;
+
+              input[type=checkbox] {
+                width: 20px;
+              }
+            }
+
+            margin-top: 10px;
+
+            span {
+              color: white;
+              a {
+                color: #fff;
+              }
+            }
+          }
+
+          margin-top: 10px;
+          flex: 0 1 100%;
+
+          input, select {
+            display: block;
+            border-radius: 4px;
+            font-size: 1rem;
+            border: 1px solid #fff;
+            color: rgba(0,0,0,.65);
+            width: 100%;
+            padding: 10px;
+            height: 50px;
+          }
+
+          &-1of2 {
+            flex-basis: 49%;
+          }
+        }
+
+        #BUT {
+          &:hover {
+            color: white;
+            background-color: darken($color-mainLightBlue, 25%);
+
+          }
+
+          text-align: center;
+          width: 100%;
+          cursor: pointer;
+          color: #333;
+          font-size: 1.375rem;
+          font-weight: 600;
+          margin: 0 auto;
+          padding: 15px 30px;
+          border-radius: 5px;
+          background-color: $color-mainLightBlue;
+          transition: all .25s ease-in-out;
+
+        }
+      }
+    }
+  }
+}

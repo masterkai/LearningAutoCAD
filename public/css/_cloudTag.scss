@@ -1,0 +1,108 @@
+.cloudTag {
+  background-color: #BFF2EF;
+  padding-bottom: 60px;
+
+  .row {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    .title2 {
+      margin: 0 auto;
+      max-width: 100%;
+      height: auto;
+      flex: 1 1 100%;
+      @include breakpoint($ipad){
+        margin-top: 20px;
+        max-height: 100%;
+        padding: 0 20px;
+      }
+    }
+
+    .output {
+      &:nth-child(even) {
+        display: none;
+      }
+      @include breakpoint($ipad){
+        padding: 20px;
+      }
+      .title {
+        margin-bottom: 20px;
+        img {
+          margin: 0 auto;
+        }
+      }
+      .chartBox {
+        //border: 1px solid red;
+        &__headerBox {
+          //border: 1px solid #002fd0;
+          display: flex;
+          flex-direction: row;
+          div {
+            &:nth-child(3){
+              flex-basis: 60%;
+            }
+            //border: 1px solid #ca00d0;
+            color: #fff;
+            background-color: #067B77;
+            text-align: center;
+            padding: 10px 20px;
+            flex:1 1 20%;
+          }
+        }
+        &__itemBox {
+          &:last-child {
+            border-bottom: unset;
+          }
+          background-color: white;
+          border-bottom: 1px solid lighten($darkGray, 20%);
+          display: flex;
+          flex-direction: row;
+          div {
+            &:nth-child(3){
+              flex-basis: 60%;
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              justify-content: flex-start;
+              .bar {
+                flex:0 1 70%;
+                margin: 0 10px;
+                display: block;
+                height: 10px;
+                background-color: #00CDAC;
+              }
+            }
+            //border: 1px solid #ca00d0;
+            text-align: center;
+            padding: 10px 20px;
+            flex:1 1 20%;
+          }
+        }
+      }
+    }
+  }
+
+  .tagBall {
+    //background-color: white;
+    width: 400px;
+    height: 400px;
+    margin: 20px auto 50px;
+    position: relative;
+  }
+
+  .tag {
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    color: #000;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  .tag:hover {
+    border: 1px solid #666;
+  }
+}

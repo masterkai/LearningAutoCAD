@@ -1,0 +1,102 @@
+$ipad: max-width 768px;
+$ipad-Pro: max-width 1200px;
+$iphone: max-width 500px;
+$medium: max-width 991px;
+$large: max-width 1024px;
+
+$color-brown: #453535;
+$lightBrown: #ABA4A4;
+$color-mainYellow: #FC0;
+$color-mainLightBlue: #45DDF1;
+$color-headerBgColor: #012C32;
+$color-mainBgColor: #011E24;
+$color-BgColor: #001119;
+$darkGray: #828282;
+$featureBorder: #00CDAC;
+$mainRed: #cd050e;
+$color-black: #333;
+$brightness: .2;
+$buttonFontSize: 1.375rem;
+$ls-content: 0.04em;
+
+.modal-dialog {
+  margin: 15% auto;
+}
+
+.modal-header {
+  background-color: rgba(0, 0, 0, .85);
+  color: $color-mainLightBlue;
+  font-weight: 600;
+  font-size: 1.25rem;
+  -webkit-border-radius: 5px 5px 0 0;
+  -moz-border-radius: 5px 5px 0 0;
+  border-radius: 5px 5px 0 0;
+}
+
+.modal-body {
+  ol {
+    padding-left: 20px;
+    list-style: circle;
+
+    li {
+      line-height: 2;
+    }
+  }
+}
+
+[role=button] {
+  width: 100%;
+  display: block;
+
+}
+
+.panel-default {
+  .panel-heading {
+    &:hover {
+      background-color: rgba(0, 0, 0, .875);
+
+      .panel-title {
+        text-shadow: $color-mainLightBlue 1px 0 10px;
+      }
+    }
+
+    background-image: unset;
+    background-color: rgba(0, 0, 0, .75);
+    padding: 20px 15px;
+    text-align: center;
+
+    .panel-title {
+      position: relative;
+      color: $color-mainLightBlue;
+      font-size: 1.375rem;
+      letter-spacing: 1px;
+
+      a {
+        text-decoration: none;
+
+        &:after {
+          content: '\f107';
+          font-family: fontawesome;
+          position: absolute;
+          right: 4%;
+          top: 0%;
+
+        }
+
+        &.active:after {
+          content: '\f106';
+        }
+      }
+    }
+  }
+}
+
+html,body {
+  -webkit-text-size-adjust: none;
+  font-family: Arial, Helvetica, sans-serif, Microsoft JhengHei;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Arial, Helvetica, "source-han-sans-traditional", "Microsoft JhengHsans", "Microsoft YaHei", "Noto Sans TC",
+  sans-serif;
+}
