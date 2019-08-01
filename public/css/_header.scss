@@ -1,13 +1,53 @@
 header {
   .KV {
+    .background {
+      background-image:url("https://www.pcschool.com.tw/activity/108/learningAutoCAD/build/images/KV_1920x768_people.png"), url("https://www.pcschool.com.tw/activity/108/learningAutoCAD/build/images/KV_1920x768_BG1.png"),
+      url("https://www.pcschool.com.tw/activity/108/learningAutoCAD/build/images/KV_1920x768_BG2.png"),
+      url("https://www.pcschool.com.tw/activity/108/learningAutoCAD/build/images/KV_1920x768_BG3.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      animation: slide .65s linear;
+    }
     @include breakpoint($ipad){
       display: none;
     }
   }
   .KV_m {
+    .background {
+      background-image:url("https://www.pcschool.com.tw/activity/108/learningAutoCAD/build/images/KV_768x500_models.png"), url("https://www.pcschool.com.tw/activity/108/learningAutoCAD/build/images/KV_768x500_BG.jpg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      animation: slide_m 1s linear;
+    }
     display: none;
     @include breakpoint($ipad){
       display: block;
     }
   }
 }
+
+
+@-webkit-keyframes slide {
+  from {
+    opacity: 0;
+    background-position: 0 768px, 1920px 0, 0 -768px, -1920px 0;
+
+  }
+  to {
+    opacity: 1;
+    background-position: 0 0, 0 0, 0 0, 0 0;
+  }
+}
+
+@-webkit-keyframes slide_m {
+  from {
+    opacity: 0;
+    background-position: 0 768px, 0 -768px;
+
+  }
+  to {
+    opacity: 1;
+    background-position: 0 0, 0 0;
+  }
+}
+

@@ -21,6 +21,7 @@
       &__withRed {
         display: block;
       }
+
       br {
         display: none;
         @include breakpoint($ipad) {
@@ -114,5 +115,9 @@
 }
 
 span.red {
+  color: red;
+}
+
+h1.red {
   color: red;
 }

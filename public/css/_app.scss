@@ -1,5 +1,6 @@
 .apply {
   background: rgb(50,133,246);
+
   background: linear-gradient(0deg, rgba(50, 133, 246, .65) 0%, rgba(0, 212, 255, .65) 100%);
   position: relative;
   padding-top: 30px;
@@ -14,9 +15,10 @@
     width: 100%;
     height: 100%;
     position: absolute;
+    background-image: url(https://www.pcschool.com.tw/activity/108/learningAutoCAD/build/images/formBG.jpg);
     background-position: center;
-    background-size: contain;
-    background-repeat: repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
     filter: brightness($brightness);
   }
 

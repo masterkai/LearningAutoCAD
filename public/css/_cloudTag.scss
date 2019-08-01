@@ -104,6 +104,11 @@
     height: 400px;
     margin: 20px auto 50px;
     position: relative;
+    @include breakpoint($iphone){
+      width: 320px;
+      height: 320px;
+      margin: 0 auto;
+    }
   }
 
   .tag {
