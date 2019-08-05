@@ -1,7 +1,7 @@
 $(function () {
+    renderEven()
     console.log(`It's OK!!!`);
-
-    let outputOdd = $('.output:odd'),
+    const outputOdd = $('.output:odd'),
         outputEven = $('.output:even'),
         output = $('.output')
 
@@ -14,10 +14,34 @@ $(function () {
         $('.tagBall').cloudTag({ballSize: 170});
     }
 
+
     let odd = $('.tag:odd')
-    console.log(odd);
-    let i = 0
+
     odd.on('click', () => {
+        if (outputOdd.hasClass('active')) {
+            return
+        } else {
+            output.removeClass('active')
+            outputOdd.addClass('active')
+            renderOdd()
+        }
+    })
+
+    let even = $('.tag:even')
+
+    even.on('click', () => {
+        if (outputEven.hasClass('active')) {
+            return
+        } else {
+            output.removeClass('active')
+            outputEven.addClass('active')
+            renderEven()
+        }
+
+
+    })
+
+    function renderOdd() {
         $('.output:odd .bar').animate({
             flexBasis: '0'
         }, 0)
@@ -39,16 +63,11 @@ $(function () {
         $('.output:odd .bar:eq(5)').animate({
             flexBasis: '43%'
         }, 2500)
-        i++
-        output.removeClass('active')
-        outputOdd.addClass('active')
-        console.log(`it's odd~~!${i} times~~`);
-    })
 
-    let even = $('.tag:even')
-    console.log(even);
-    let x = 0
-    even.on('click', () => {
+
+    }
+
+    function renderEven() {
         $('.output:even .bar').animate({
             flexBasis: '0'
         }, 0)
@@ -71,11 +90,6 @@ $(function () {
             flexBasis: '42%'
         }, 2500)
 
-        x++
-        output.removeClass('active')
-        outputEven.addClass('active')
-        console.log(`it's even~~!${x} times~~`);
-    })
 
-
+    }
 })

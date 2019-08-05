@@ -1,7 +1,7 @@
 $(function() {
     $("#GOTOP").click(function() {
         jQuery("html,body").animate({
-            scrollTop: $('.form').offset().top
+            scrollTop: $('#apply').offset().top
         }, 400);
     });
     $(window).scroll(function() {

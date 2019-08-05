@@ -32,14 +32,14 @@ $(function () {
             "townno": $("#ddl_area_no :selected").val(),
             "townnoname": $("#ddl_area_no :selected").text(),
             "per_chk": $("input[name=per_chk]:checked").length,
-            "memo": (memo + "；"),
+            "memo": `${memo} & 夢幻職業:${$("select[name='ea']:selected").val()};`,
             "web_pno": web_pno,
             "fromto": QueryString("fromto") !== null ? QueryString("fromto") : "",
             "fromurl": document.location.href, //location.href,
             "sourceid": QueryString("fc") !== null ? QueryString("fc") : "",
             "NList_Type": NList_Type,
             // "AssignMode": 2,
-            "Assigndept": $("select[name='ea'] :selected").val(),
+            // "Assigndept": $("select[name='ea'] :selected").val(),
             // $("select[name='ea'] :selected").text()
             "func": "njycooooqj"
         };

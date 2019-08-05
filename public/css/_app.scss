@@ -42,6 +42,16 @@
     .applicationRule {
 
       p {
+        .break {
+          display: none;
+          @include breakpoint($iphone){
+            display: block;
+          }
+        }
+
+        @include breakpoint($iphone){
+          font-size: .9rem;
+        }
         letter-spacing: $ls-content;
         color: #ffffff;
         margin: 10px auto;
